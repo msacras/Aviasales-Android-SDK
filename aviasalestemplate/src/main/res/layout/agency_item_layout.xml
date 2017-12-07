@@ -11,7 +11,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="20dp"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_price"
 			android:layout_width="wrap_content"
 			android:layout_height="32dp"
@@ -22,7 +22,7 @@
 			android:textColor="@color/dark_blue_455A64"
 			android:textSize="15dp"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_agency"
 			android:layout_width="wrap_content"
 			android:layout_height="32dp"

@@ -7,7 +7,7 @@
 		android:layout_height="wrap_content"
 		android:paddingBottom="23dp">
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_carrier_name"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
 			android:layout_marginRight="7dp"
 			android:scaleType="centerInside"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_depart_name"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
 			android:textColor="@color/grey_37474F"
 			android:textSize="15dp"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_depart_airport_name"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -52,9 +52,8 @@
 			android:textColor="@color/grey_98000000"
 			android:textSize="10dp"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_carrier_info"
-			typeface="roboto_regular"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_alignLeft="@+id/tv_depart_name"
@@ -62,9 +61,9 @@
 			android:layout_marginTop="22dp"
 			android:text="Рейс AF-1437"
 			android:textColor="@color/grey_37474F"
-			android:textSize="14dp"/>
+			android:textSize="14dp"/><!--typeface="roboto_regular"-->
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_departure_time"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -74,9 +73,9 @@
 			android:text="07:30"
 			android:textColor="@color/dark_blue_455A64"
 			android:textSize="24dp"
-			app:typeface="roboto_light"/>
+			/><!--app:typeface="roboto_light"-->
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_departure_date"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -88,7 +87,7 @@
 			android:textColor="@color/grey_98000000"
 			android:textSize="10dp"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_dash"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -98,9 +97,9 @@
 			android:text=" – "
 			android:textColor="@color/dark_blue_455A64"
 			android:textSize="24dp"
-			app:typeface="roboto_light"/>
+			/><!--app:typeface="roboto_light"-->
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_arrival_time"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -110,9 +109,9 @@
 			android:text="07:30"
 			android:textColor="@color/dark_blue_455A64"
 			android:textSize="24dp"
-			app:typeface="roboto_light"/>
+			/><!--app:typeface="roboto_light"-->
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_arrival_date"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -123,7 +122,7 @@
 			android:textColor="@color/grey_98000000"
 			android:textSize="10dp"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_flight_duration"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -135,7 +134,7 @@
 			android:textSize="14dp"/>
 
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_arrival_name"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -146,7 +145,7 @@
 			android:textColor="@color/grey_37474F"
 			android:textSize="15dp"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_arrival_airport_name"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"

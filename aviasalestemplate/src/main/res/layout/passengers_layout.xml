@@ -16,7 +16,7 @@
 			android:src="@drawable/ic_adult"
 			android:tint="@color/colorAsPrimary"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_adults"
 			style="@style/search.passengers"
 			android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
 			android:src="@drawable/ic_child"
 			android:tint="@color/colorAsPrimary"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_children"
 			style="@style/search.passengers"
 			android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
 			android:src="@drawable/ic_infant"
 			android:tint="@color/colorAsPrimary"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_infants"
 			style="@style/search.passengers"
 			android:layout_width="wrap_content"

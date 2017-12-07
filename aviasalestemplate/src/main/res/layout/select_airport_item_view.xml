@@ -17,7 +17,7 @@
 			android:gravity="center_vertical"
 			android:orientation="vertical">
 
-		<com.devspark.robototextview.widget.RobotoTextView
+		<android.support.v7.widget.AppCompatTextView
 				android:id="@+id/txtv_destination_fragment_search_item_city_country"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
 				android:textColor="@color/grey_text"
 				android:textSize="16dp"/>
 
-		<com.devspark.robototextview.widget.RobotoTextView
+		<android.support.v7.widget.AppCompatTextView
 				android:id="@+id/txtv_destination_fragment_search_item_airport"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
 				android:textSize="9.33dp"/>
 	</LinearLayout>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/txtv_destination_fragment_search_item_iata"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"

@@ -7,7 +7,7 @@
 		android:gravity="center_vertical"
 		tools:showIn="@layout/search_form_fragment">
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_departure_date"
 			style="@style/search.date.normal"
 			android:layout_width="wrap_content"
@@ -15,7 +15,7 @@
 			android:layout_marginLeft="34dp"
 			android:text="23 февраля, 2014"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_week_day"
 			style="@style/search.date.small"
 			android:layout_width="wrap_content"

@@ -23,7 +23,7 @@
 				android:scaleType="center"
 				android:src="@drawable/ic_empty_screen"/>
 
-		<com.devspark.robototextview.widget.RobotoTextView
+		<android.support.v7.widget.AppCompatTextView
 				android:id="@+id/tv_empty_fragment_template_title"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
 			android:layout_height="0dp"
 			android:layout_centerInParent="true"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_empty_fragment_template_content"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
 			android:gravity="center_horizontal"
 			android:orientation="vertical">
 
-		<com.devspark.robototextview.widget.RobotoButton
+		<android.support.v7.widget.AppCompatButton
 				android:id="@+id/btn_empty_fragment_template"
 				android:layout_width="wrap_content"
 				android:layout_height="35dp"
@@ -74,7 +74,7 @@
 				android:textAllCaps="true"
 				android:textColor="@color/grey_98000000"
 				android:textSize="13.33dp"
-				app:typeface="roboto_medium"/>
+				/><!--app:typeface="roboto_medium"-->
 
 	</LinearLayout>
 </RelativeLayout>

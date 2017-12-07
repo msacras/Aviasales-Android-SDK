@@ -15,7 +15,7 @@
 			android:focusable="false"
 			android:saveEnabled="false"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_stop_over_filter_item_text"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
@@ -26,7 +26,7 @@
 			android:textColor="@color/gray_828282"
 			android:textSize="16dp"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_stop_over_filter_item_price"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"

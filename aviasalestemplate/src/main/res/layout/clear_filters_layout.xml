@@ -9,7 +9,7 @@
 		android:focusableInTouchMode="true"
 		android:background="@drawable/clear_filters_background">
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_tickets_count"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
@@ -30,7 +30,7 @@
 			android:layout_centerVertical="true"
 			android:background="@color/gray_A7A7A7"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/btn_clear"
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"

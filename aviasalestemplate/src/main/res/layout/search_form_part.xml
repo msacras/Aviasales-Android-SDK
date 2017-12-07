@@ -48,7 +48,7 @@
 					android:paddingBottom="@dimen/search_form_trip_class_margin_bottom"
 					android:paddingLeft="15dp">
 
-				<com.devspark.robototextview.widget.RobotoTextView
+				<android.support.v7.widget.AppCompatTextView
 						android:id="@+id/tv_trip_class_title"
 						style="@style/search.date.small"
 						android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
 						android:layout_marginTop="3dp"
 						android:text="@string/search_form_class"/>
 
-				<com.devspark.robototextview.widget.RobotoTextView
+				<android.support.v7.widget.AppCompatTextView
 						android:id="@+id/tv_trip_class"
 						style="@style/search.class"
 						android:layout_width="wrap_content"

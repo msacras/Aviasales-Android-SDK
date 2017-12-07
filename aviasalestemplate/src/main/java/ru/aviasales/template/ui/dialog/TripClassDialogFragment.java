@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.devspark.robototextview.widget.RobotoCheckedTextView;
+import android.support.v7.widget.AppCompatCheckedTextView;
 
 import ru.aviasales.core.search.params.SearchParams;
 import ru.aviasales.template.R;
@@ -17,8 +17,8 @@ public class TripClassDialogFragment extends BaseDialogFragment {
 
 	public final static String TAG = "fragment.TripClassDialogFragment";
 
-	private RobotoCheckedTextView economy;
-	private RobotoCheckedTextView business;
+	private AppCompatCheckedTextView economy;
+	private AppCompatCheckedTextView business;
 
 	private String tripClass = SearchParams.TRIP_CLASS_ECONOMY;
 
@@ -59,8 +59,8 @@ public class TripClassDialogFragment extends BaseDialogFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.trip_class_picker_fragment, container);
 
-		economy = (RobotoCheckedTextView) view.findViewById(R.id.tv_economy);
-		business = (RobotoCheckedTextView) view.findViewById(R.id.tv_business);
+		economy = (AppCompatCheckedTextView) view.findViewById(R.id.tv_economy);
+		business = (AppCompatCheckedTextView) view.findViewById(R.id.tv_business);
 		economy.getBackground().setColorFilter(getResources().getColor(R.color.colorAviasalesMain), PorterDuff.Mode.SRC_ATOP);
 		business.getBackground().setColorFilter(getResources().getColor(R.color.colorAviasalesMain), PorterDuff.Mode.SRC_ATOP);
 

@@ -15,7 +15,7 @@
 			android:layout_height="wrap_content"
 			android:layout_marginTop="7dp">
 
-		<com.devspark.robototextview.widget.RobotoButton
+		<android.support.v7.widget.AppCompatButton
 				android:id="@+id/btn_complex_search_add"
 				android:layout_width="wrap_content"
 				android:layout_height="36dp"
@@ -31,7 +31,7 @@
 				android:layout_height="1px"
 				android:layout_centerHorizontal="true"/>
 
-		<com.devspark.robototextview.widget.RobotoButton
+		<android.support.v7.widget.AppCompatButton
 				android:id="@+id/btn_complex_search_remove"
 				android:layout_width="wrap_content"
 				android:layout_height="36dp"

@@ -16,7 +16,7 @@
 			android:clickable="false"
 			android:focusable="false"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/txtv_overnight_filter_view_airport_text"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"

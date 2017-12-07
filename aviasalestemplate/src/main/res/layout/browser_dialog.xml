@@ -6,7 +6,7 @@
 		android:layout_width="225dp"
 		android:layout_height="wrap_content">
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_loading_agency"
 			style="@style/browser.dialog.text"
 			android:layout_width="wrap_content"

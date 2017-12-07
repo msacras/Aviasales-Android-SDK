@@ -6,7 +6,7 @@
             android:layout_marginTop="@dimen/search_form_titles_margin_top"
             android:orientation="horizontal">
 
-	<com.devspark.robototextview.widget.RobotoRadioButton
+	<android.support.v7.widget.AppCompatRadioButton
 			android:id="@+id/rb_simple_search"
 			style="@style/search.title_button"
 			android:layout_width="156dp"
@@ -20,7 +20,7 @@
 			android:textAllCaps="true"
 			android:text="@string/search_form_tab_simple"/>
 
-	<com.devspark.robototextview.widget.RobotoRadioButton
+	<android.support.v7.widget.AppCompatRadioButton
 			android:id="@+id/rb_complex_search"
 			style="@style/search.title_button"
 			android:layout_width="156dp"

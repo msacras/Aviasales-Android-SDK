@@ -6,7 +6,7 @@
 		android:layout_height="wrap_content"
 		android:orientation="vertical">
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/tv_dialog_title"
 			style="@style/dialog.title"
 			android:layout_width="match_parent"
@@ -23,7 +23,7 @@
 			android:paddingLeft="23.33dp"
 			android:paddingRight="24dp">
 
-		<com.devspark.robototextview.widget.RobotoCheckedTextView
+		<android.support.v7.widget.AppCompatCheckedTextView
 				android:id="@+id/tv_economy"
 				style="@style/dialog.tripclass.item"
 				android:layout_width="match_parent"
@@ -41,7 +41,7 @@
 			android:paddingLeft="23.33dp"
 			android:paddingRight="24dp">
 
-		<com.devspark.robototextview.widget.RobotoCheckedTextView
+		<android.support.v7.widget.AppCompatCheckedTextView
 				android:id="@+id/tv_business"
 				style="@style/dialog.tripclass.item"
 				android:layout_width="match_parent"

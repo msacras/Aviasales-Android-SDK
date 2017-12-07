@@ -37,7 +37,7 @@
 					android:layout_marginLeft="14dp"
 					android:layout_marginRight="17dp">
 
-				<com.devspark.robototextview.widget.RobotoTextView
+				<android.support.v7.widget.AppCompatTextView
 						android:id="@+id/tv_currency"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
 						android:textColor="@color/aviasales_price_color"
 						android:textSize="10dp"/>
 
-				<com.devspark.robototextview.widget.RobotoTextView
+				<android.support.v7.widget.AppCompatTextView
 						android:id="@+id/tv_price"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"

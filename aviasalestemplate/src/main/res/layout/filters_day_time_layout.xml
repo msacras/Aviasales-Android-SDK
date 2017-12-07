@@ -13,7 +13,7 @@
 			android:layout_alignTop="@+id/btn_range_seekbar_day"
 			android:layout_toLeftOf="@+id/btn_range_seekbar_day">
 
-		<com.devspark.robototextview.widget.RobotoButton
+		<android.support.v7.widget.AppCompatButton
 				android:id="@+id/btn_range_seekbar_morning"
 				android:layout_width="85dp"
 				android:layout_height="25dp"
@@ -26,7 +26,7 @@
 
 	</FrameLayout>
 
-	<com.devspark.robototextview.widget.RobotoButton
+	<android.support.v7.widget.AppCompatButton
 			android:id="@+id/btn_range_seekbar_day"
 			android:layout_width="85dp"
 			android:layout_height="25dp"
@@ -44,7 +44,7 @@
 			android:layout_alignTop="@+id/btn_range_seekbar_day"
 			android:layout_toRightOf="@+id/btn_range_seekbar_day">
 
-		<com.devspark.robototextview.widget.RobotoButton
+		<android.support.v7.widget.AppCompatButton
 				android:id="@+id/btn_range_seekbar_evening"
 				android:layout_width="85dp"
 				android:layout_height="25dp"

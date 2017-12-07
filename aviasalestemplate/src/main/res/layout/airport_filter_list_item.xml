@@ -25,7 +25,7 @@
 			android:gravity="left|center_vertical"
 			android:orientation="vertical">
 
-		<com.devspark.robototextview.widget.RobotoTextView
+		<android.support.v7.widget.AppCompatTextView
 				android:id="@+id/tvAirportFilterListItemCity"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
 				android:textColor="@color/gray_828282"
 				android:textSize="16dp"/>
 
-		<com.devspark.robototextview.widget.RobotoTextView
+		<android.support.v7.widget.AppCompatTextView
 				android:id="@+id/tvAirportFilterListItemName"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
 				android:saveEnabled="false"
 				android:stepSize="0.1"/>
 
-		<com.devspark.robototextview.widget.RobotoTextView
+		<android.support.v7.widget.AppCompatTextView
 				android:id="@+id/tvAirportFilterListItemIata"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
