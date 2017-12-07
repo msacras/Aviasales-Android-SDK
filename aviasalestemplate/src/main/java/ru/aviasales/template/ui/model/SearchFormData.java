@@ -119,7 +119,9 @@ public class SearchFormData {
 	private void loadSimpleSearchParams(SharedPreferences prefs) {
 		simpleSearchParams = new SimpleSearchParams();
 
-		simpleSearchParams.setOrigin(PlaceData.create(prefs.getString(SEARCH_PARAM_ORIGIN_NAME, null)));
+		String defaultCity = "{\"airport_name\":\"Chisinau International Airport\",\"city_name\":\"Chisinau\",\"coordinates\":[\"46.935444\",\"28.934967\"],\"country_name\":\"Moldova\",\"iata\":\"KIV\",\"index_strings\":[\"Sân bay quốc tế Chişinău\",\"キシナウ\",\"基希訥烏\",\"Chişinău\",\"Moldova\",\"มอลโดวา\",\"สนามบินคีชีเนา\",\"Republik Moldau\",\"كيشيناو\",\"Chisinau\",\"摩尔多瓦\",\"Kiszyniów\",\"몰도바\",\"키시나우\",\"مطار كيشيناو الدولي\",\"基希讷乌\",\"Chisinau International\",\"摩爾多瓦\",\"Mołdawia\",\"키시너우 국제공항\",\"Chișinău\",\"基希訥烏國際機場\",\"Moldavia\",\"Chisinau International Airport\",\"Moldavie\",\"مولدافيا\",\"基辛那乌机场\",\"キシナウ国際空港\",\"คีชีเนา\",\"Moldávia\",\"Кишинёв\",\"モルドバ\",\"Kisinau\",\"Kişinev\",\"Bandar Udara Internasional Kishinev\",\"Молдавия\",\"基辛那乌\"],\"name\":\"Chisinau, Moldova\"}";
+
+		simpleSearchParams.setOrigin(PlaceData.create(prefs.getString(SEARCH_PARAM_ORIGIN_NAME, defaultCity)));
 		simpleSearchParams.setDestination(PlaceData.create(prefs.getString(SEARCH_PARAM_DESTINATION_NAME, null)));
 
 		simpleSearchParams.setDepartDate(prefs.getString(SEARCH_PARAM_DEPART_DATE, null));
