@@ -1,1 +1,1 @@
-include ':expandedlistview', ':aviasalestemplate', ':adsinterface', ':simple_demo'
+include ':expandedlistview', ':aviasalestemplate', ':adsinterface'
