@@ -17,7 +17,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="match_parent"/>
 
-	<com.devspark.robototextview.widget.RobotoTextView
+	<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/txtv_base_filter_list_item"
 			android:layout_width="match_parent"
 			android:layout_marginLeft="18dp"
