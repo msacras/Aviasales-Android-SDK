@@ -77,7 +77,7 @@ public class SearchFormFragment extends BaseFragment implements SimpleSearchForm
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
-		setTextToActionBar(getString(getActivity().getApplicationInfo().labelRes));
+		setTextToActionBar(getString(AviasalesFragment.labelRes));
 
 		if (savedInstanceState != null) {
 			dialogSegmentNumber = savedInstanceState.getInt(EXTRA_DIALOG_SEGMENT_SHOWED);

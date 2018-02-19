@@ -27,7 +27,8 @@ public class Defined extends CoreDefined {
 	public static final String FILTERS_TIME_FORMAT = "HH:mm";
 	public static final String AM_PM_FILTERS_TIME_FORMAT = "hh:mma";
 
-	private static final String DEFAULT_CURRENCY = "MDL";
+	private static final String DEFAULT_CURRENCY = "EUR";
+	private static final String MD_DEFAULT_CURRENCY = "MDL";
 	private static final String RU_DEFAULT_CURRENCY = "RUB";
 	private static final String EN_DEFAULT_CURRENCY = "USD";
 	private static final String EN_GB_DEFAULT_CURRENCY = "GBP";
@@ -123,6 +124,8 @@ public class Defined extends CoreDefined {
 	public static String getDefaultCurrency() {
 		String locale = LocaleUtil.getLocale();
 
+		return DEFAULT_CURRENCY;
+		/*
 		if (locale.equalsIgnoreCase(LanguageCodes.ENGLISH + "_" + CountryCodes.GREAT_BRITAIN)) {
 			return EN_GB_DEFAULT_CURRENCY;
 		} else if (locale.equalsIgnoreCase(LanguageCodes.ENGLISH + "_" + CountryCodes.GREAT_BRITAIN)) {
@@ -143,6 +146,7 @@ public class Defined extends CoreDefined {
 				|| locale.equalsIgnoreCase(LanguageCodes.RUSSIAN)) {
 			return RU_DEFAULT_CURRENCY;
 		} return DEFAULT_CURRENCY;
+		*/
 	}
 
 	public static Map<String, String> getCurrenciesArray() {

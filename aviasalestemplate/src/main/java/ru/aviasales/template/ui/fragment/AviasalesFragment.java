@@ -26,6 +26,8 @@ import java.util.concurrent.TimeUnit;
 
 public class AviasalesFragment extends Fragment implements AviasalesImpl {
 
+	public static int labelRes = 0;
+
 	public final static String TAG = "aviasales_fragment";
 	private final static String TAG_CHILD = "aviasales_child_fragment";
 	private static final String SEARCH_PARAMS_IS_UPDATED = "searh_params_is_updated";
