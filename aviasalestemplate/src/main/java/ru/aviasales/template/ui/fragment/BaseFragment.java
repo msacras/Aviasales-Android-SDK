@@ -25,9 +25,9 @@ public abstract class BaseFragment extends Fragment implements BackPressable {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		if (savedInstanceState != null) {
+		/*if (savedInstanceState != null) {
 			removedDialogFragmentTag = savedInstanceState.getString(EXTRA_REMOVED_DIALOG);
-		}
+		}*/
 		super.onCreate(savedInstanceState);
 
 	}
