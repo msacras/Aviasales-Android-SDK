@@ -52,7 +52,7 @@ public class SearchingFragment extends BaseFragment {
 		setupViews(rootView);
 		showActionBar(true);
 		setTextToActionBar(getString(R.string.searching_information));
-		setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
+		setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 		setUpMrecAd();
 
 		return rootView;
