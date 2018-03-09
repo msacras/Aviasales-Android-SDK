@@ -50,10 +50,10 @@ public class SearchingFragment extends BaseFragment {
 		View rootView = inflater.inflate(R.layout.searching_fragment, container, false);
 
 		setupViews(rootView);
-		/*showActionBar(true);
+		showActionBar(true);
 		setTextToActionBar(getString(R.string.searching_information));
-		setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
-		setUpMrecAd();*/
+		//setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
+		setUpMrecAd();
 
 		return rootView;
 	}
