@@ -52,7 +52,8 @@ public class SearchingFragment extends BaseFragment {
 		setupViews(rootView);
 		showActionBar(true);
 		setTextToActionBar(getString(R.string.searching_information));
-		setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+		//setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+		getActionBar().setHomeButtonEnabled(false);
 		setUpMrecAd();
 
 		return rootView;
