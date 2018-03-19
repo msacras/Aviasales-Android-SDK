@@ -7,7 +7,6 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 
 import ru.aviasales.adsinterface.AdsInterface;
 import ru.aviasales.core.AviasalesSDK;
@@ -54,7 +52,7 @@ public class SearchingFragment extends BaseFragment {
 		setTextToActionBar(getString(R.string.searching_information));
 		//setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 		//getActionBar().setDisplayHomeAsUpEnabled(false);
-		getActivity().invalidateOptionsMenu();
+		getActionBar().setHomeButtonEnabled(false);
 		getActionBar().setDisplayUseLogoEnabled(true);
 		setUpMrecAd();
 
