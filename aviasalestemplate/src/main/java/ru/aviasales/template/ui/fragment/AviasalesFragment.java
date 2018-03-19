@@ -22,6 +22,7 @@ import ru.aviasales.template.ui.listener.AviasalesImpl;
 import ru.aviasales.template.ui.model.SearchFormData;
 import ru.aviasales.template.utils.Utils;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 public class AviasalesFragment extends Fragment implements AviasalesImpl {
@@ -36,6 +37,9 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 	private final static int CACHE_FILE_COUNT = 100;
 	private final static int MEMORY_CACHE_SIZE = 5 * 1024 * 1024;
 	private static final String AD_SHOWED_ONCE = "AD_SHOWED_ONCE";
+
+	public static Callable disableNavigationDrawer = null;
+	public static Callable enableNavigationDrawer = null;
 
 	private FragmentManager fragmentManager;
 
@@ -78,6 +82,16 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 		return rootView;
 	}
 
+	@Override
+	public void onResume() {
+		super.onResume();
+		try {
+			enableNavigationDrawer.call();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	private void migrateSearchFormTripClassParam() {
 		SharedPreferences prefs = Utils.getPreferences(getActivity());
 
@@ -101,7 +115,11 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 	}
 
 	public void startFragment(BaseFragment fragment, boolean shouldAddToBackStack) {
+		try {
+			enableNavigationDrawer.call();
+		} catch (Exception e){
 
+		}
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 		fragmentTransaction.replace(R.id.fragment_child_place, fragment, fragment.getClass().getSimpleName());
 		if (shouldAddToBackStack) {
