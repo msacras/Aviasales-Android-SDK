@@ -79,17 +79,13 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 				}
 			}, TimeUnit.SECONDS.toMillis(2));
 		}
-		return rootView;
-	}
-
-	@Override
-	public void onResume() {
-		super.onResume();
 		try {
 			enableDrawerLayout.call();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		return rootView;
 	}
 
 	private void migrateSearchFormTripClassParam() {
