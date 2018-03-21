@@ -25,7 +25,12 @@ public class BrowserActivity extends AppCompatActivity {
 		toolbar = findViewById(R.id.toolbar);
 
 		toolbar.setNavigationIcon(R.drawable.ic_browser_back);
-		toolbar.setNavigationOnClickListener(view -> onBackPressed());
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				onBackPressed();
+			}
+		});
 	}
 
 	private void initFragment() {
