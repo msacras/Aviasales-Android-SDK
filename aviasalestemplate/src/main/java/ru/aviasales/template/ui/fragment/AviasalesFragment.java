@@ -79,11 +79,6 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 				}
 			}, TimeUnit.SECONDS.toMillis(2));
 		}
-		try {
-			enableDrawerLayout.call();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 
 		return rootView;
 	}
@@ -116,6 +111,7 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 		} catch (Exception e){
 
 		}
+
 		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 		fragmentTransaction.replace(R.id.fragment_child_place, fragment, fragment.getClass().getSimpleName());
 		if (shouldAddToBackStack) {
@@ -155,6 +151,13 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 
 	public boolean onBackPressed() {
 		if (fragmentManager != null && fragmentManager.getBackStackEntryCount() > 0 && isVisible()) {
+			if (fragmentManager.getBackStackEntryCount() > 1)
+				try {
+					enableDrawerLayout.call();
+				} catch (Exception e){
+
+				}
+
 			fragmentManager.popBackStack();
 			return true;
 		} else {
