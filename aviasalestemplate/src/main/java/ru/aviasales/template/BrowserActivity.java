@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.View;
 
 import ru.aviasales.template.ui.fragment.BrowserFragment;
 
@@ -17,6 +20,9 @@ public class BrowserActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.aviasales_fragment_layout);
 		initFragment();
+
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setDisplayShowHomeEnabled(true);
 	}
 
 	private void initFragment() {

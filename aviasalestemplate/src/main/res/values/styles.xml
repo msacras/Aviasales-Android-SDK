@@ -3,7 +3,8 @@
 	<style name="AviasalesTemplateTheme" parent="BaseAppTheme">
 	</style>
 
-	<style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="actionBarSize">40dp</item>
 		<item name="colorControlActivated">@color/colorAviasalesMain</item>
 		<item name="colorPrimary">@color/colorAsPrimary</item>
 		<item name="colorPrimaryDark">@color/colorAsPrimaryDark</item>
