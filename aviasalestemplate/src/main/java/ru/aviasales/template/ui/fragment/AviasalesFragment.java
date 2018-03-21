@@ -38,8 +38,8 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 	private final static int MEMORY_CACHE_SIZE = 5 * 1024 * 1024;
 	private static final String AD_SHOWED_ONCE = "AD_SHOWED_ONCE";
 
-	public static Callable disableNavigationDrawer = null;
-	public static Callable enableNavigationDrawer = null;
+	public static Callable disableDrawerLayout = null;
+	public static Callable enableDrawerLayout = null;
 
 	private FragmentManager fragmentManager;
 
@@ -86,7 +86,7 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 	public void onResume() {
 		super.onResume();
 		try {
-			enableNavigationDrawer.call();
+			enableDrawerLayout.call();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -116,7 +116,7 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 
 	public void startFragment(BaseFragment fragment, boolean shouldAddToBackStack) {
 		try {
-			enableNavigationDrawer.call();
+			disableDrawerLayout.call();
 		} catch (Exception e){
 
 		}
