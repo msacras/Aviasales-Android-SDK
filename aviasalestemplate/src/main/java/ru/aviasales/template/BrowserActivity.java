@@ -23,8 +23,11 @@ public class BrowserActivity extends AppCompatActivity {
 		initFragment();
 
 		toolbar = findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
 
-		toolbar.setNavigationIcon(R.drawable.ic_browser_back);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
