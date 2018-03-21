@@ -23,7 +23,6 @@ public class BrowserActivity extends AppCompatActivity {
 		initFragment();
 
 		toolbar = findViewById(R.id.toolbar);
-		//fffffffuuuuuuuuuuuuuuuu
 
 		toolbar.setNavigationIcon(R.drawable.ic_browser_back);
 		toolbar.setNavigationOnClickListener(view -> onBackPressed());
