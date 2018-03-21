@@ -151,7 +151,7 @@ public class AviasalesFragment extends Fragment implements AviasalesImpl {
 
 	public boolean onBackPressed() {
 		if (fragmentManager != null && fragmentManager.getBackStackEntryCount() > 0 && isVisible()) {
-			if (fragmentManager.getBackStackEntryCount() > 1)
+			if (fragmentManager.getBackStackEntryCount() == 1)
 				try {
 					enableDrawerLayout.call();
 				} catch (Exception e){
