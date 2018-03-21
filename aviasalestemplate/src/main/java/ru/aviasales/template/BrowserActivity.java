@@ -14,6 +14,7 @@ import ru.aviasales.template.ui.fragment.BrowserFragment;
 public class BrowserActivity extends AppCompatActivity {
 	public static final String SHOW_LOADING_DIALOG = "show_loading_dialog";
 	public static final String HOST = "HOST";
+	private Toolbar toolbar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,10 @@ public class BrowserActivity extends AppCompatActivity {
 		setContentView(R.layout.aviasales_fragment_layout);
 		initFragment();
 
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		toolbar = findViewById(R.id.toolbar);
+
+		toolbar.setNavigationIcon(R.drawable.ic_browser_back);
+		toolbar.setNavigationOnClickListener(view -> onBackPressed());
 	}
 
 	private void initFragment() {
