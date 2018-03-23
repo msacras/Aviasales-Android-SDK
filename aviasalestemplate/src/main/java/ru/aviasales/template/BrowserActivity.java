@@ -23,7 +23,7 @@ public class BrowserActivity extends AppCompatActivity {
 		setContentView(R.layout.aviasales_fragment_layout);
 		initFragment();
 
-		getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
+		getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME);
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
