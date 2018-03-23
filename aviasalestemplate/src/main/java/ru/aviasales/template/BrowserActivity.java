@@ -2,6 +2,7 @@ package ru.aviasales.template;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -20,10 +21,18 @@ public class BrowserActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.aviasales_fragment_layout);
+		initFragment();
+	}
+
+	@Override
+	protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+		super.onPostCreate(savedInstanceState);
+
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
-		toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_material);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 			@Override
@@ -31,14 +40,6 @@ public class BrowserActivity extends AppCompatActivity {
 				onBackPressed();
 			}
 		});
-
-		initFragment();
-	}
-
-	@Override
-	public boolean onSupportNavigateUp() {
-		onBackPressed();
-		return true;
 	}
 
 	private void initFragment() {
