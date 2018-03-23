@@ -21,7 +21,7 @@ public class BrowserActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.aviasales_fragment_layout);
-		initFragment();
+		//initFragment();
 	}
 
 	@Override
