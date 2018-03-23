@@ -23,10 +23,15 @@ public class BrowserActivity extends AppCompatActivity {
 		setContentView(R.layout.aviasales_fragment_layout);
 		initFragment();
 
-		getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME);
-		getSupportActionBar().setHomeButtonEnabled(true);
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		Toolbar toolbar = findViewById(R.id.toolbar);
+		toolbar.setNavigationIcon(R.drawable.back_navigation_arrow);
+
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				onBackPressed();
+			}
+		});
 	}
 
 	@Override
