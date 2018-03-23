@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -15,7 +16,6 @@ import ru.aviasales.template.ui.fragment.BrowserFragment;
 public class BrowserActivity extends AppCompatActivity {
 	public static final String SHOW_LOADING_DIALOG = "show_loading_dialog";
 	public static final String HOST = "HOST";
-	private Toolbar toolbar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,8 @@ public class BrowserActivity extends AppCompatActivity {
 		setContentView(R.layout.aviasales_fragment_layout);
 		initFragment();
 
+		getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
+		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
 	}
