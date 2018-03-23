@@ -28,18 +28,17 @@ public class BrowserActivity extends AppCompatActivity {
 	protected void onPostCreate(@Nullable Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
 
-		toolbar = (Toolbar) findViewById(R.id.toolbar);
-		setSupportActionBar(toolbar);
+//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//		getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				onBackPressed();
-			}
-		});
+//		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View view) {
+//				onBackPressed();
+//			}
+//		});
+		getSupportActionBar();
+		getActionBar();
 	}
 
 	private void initFragment() {

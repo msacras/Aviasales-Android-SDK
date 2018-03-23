@@ -4,7 +4,7 @@
 	<style name="ActionButton"
 	       parent="@android:style/Widget.ActionButton"></style>
 
-	<style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+	<style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 		<item name="actionBarSize">40dp</item>
 		<item name="colorControlActivated">@color/colorAviasalesMain</item>
 		<item name="colorPrimary">@color/colorAsPrimary</item>
