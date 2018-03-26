@@ -23,25 +23,18 @@ public class BrowserActivity extends AppCompatActivity {
 		setContentView(R.layout.browser_fragment_layout);
 		initFragment();
 
-		Toolbar toolbar = findViewById(R.id.toolbar);
-		setSupportActionBar(toolbar);
+//		Toolbar toolbar = findViewById(R.id.toolbar);
+//		setSupportActionBar(toolbar);
 
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-//		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//			@Override
-//			public void onClick(View view) {
-//				onBackPressed();
-//			}
-//		});
+//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//		getSupportActionBar().setDisplayShowHomeEnabled(true);
 	}
 
-	@Override
-	public boolean onSupportNavigateUp() {
-		onBackPressed();
-		return super.onSupportNavigateUp();
-	}
+//	@Override
+//	public boolean onSupportNavigateUp() {
+//		onBackPressed();
+//		return super.onSupportNavigateUp();
+//	}
 
 	private void initFragment() {
 		FragmentManager fm = getSupportFragmentManager();
