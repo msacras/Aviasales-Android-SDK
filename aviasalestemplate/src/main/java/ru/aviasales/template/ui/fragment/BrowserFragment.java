@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.CookieManager;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
@@ -335,7 +336,7 @@ public class BrowserFragment extends BaseFragment {
 			loadingFinished = true;
 
 			dismissDialogFragment();
-//			setBrowserNav();
+			setBrowserNav();
 		}
 	}
 }

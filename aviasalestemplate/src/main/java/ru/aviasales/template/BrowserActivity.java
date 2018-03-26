@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import ru.aviasales.template.ui.fragment.BrowserFragment;
 
@@ -29,7 +30,8 @@ public class BrowserActivity extends AppCompatActivity {
 
 	@Override
 	public boolean onSupportNavigateUp() {
-		onBackPressed();
+		BrowserFragment fragment = (BrowserFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_child_place);
+		fragment.onBackPressed();
 		return super.onSupportNavigateUp();
 	}
 
