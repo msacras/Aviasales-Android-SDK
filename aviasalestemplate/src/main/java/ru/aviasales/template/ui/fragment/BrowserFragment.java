@@ -335,7 +335,7 @@ public class BrowserFragment extends BaseFragment {
 			loadingFinished = true;
 
 			dismissDialogFragment();
-			setBrowserNav();
+//			setBrowserNav();
 		}
 	}
 }
