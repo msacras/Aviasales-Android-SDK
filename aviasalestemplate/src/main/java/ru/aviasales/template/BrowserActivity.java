@@ -27,11 +27,11 @@ public class BrowserActivity extends AppCompatActivity {
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
 	}
 
-//	@Override
-//	public boolean onSupportNavigateUp() {
-//		onBackPressed();
-//		return super.onSupportNavigateUp();
-//	}
+	@Override
+	public boolean onSupportNavigateUp() {
+		onBackPressed();
+		return super.onSupportNavigateUp();
+	}
 
 	private void initFragment() {
 		FragmentManager fm = getSupportFragmentManager();

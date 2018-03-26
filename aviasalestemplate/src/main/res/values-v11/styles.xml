@@ -12,7 +12,7 @@
 	</style>
 
 	<style name="ActionButton"
-	       parent="@android:style/Widget.ActionButton">
+		parent="@android:style/Widget.ActionButton">
 		<item name="android:background">@drawable/action_button_selector</item>
 	</style>
 
