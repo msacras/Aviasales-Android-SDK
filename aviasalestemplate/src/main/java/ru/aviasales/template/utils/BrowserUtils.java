@@ -20,11 +20,7 @@ public class BrowserUtils {
 	                               boolean showLoadingDialog) {
 		if (url == null || title == null) return;
 
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-			openInternalBrowser(activity, url, title, host, showLoadingDialog);
-		} else {
-			openExternalBrowser(activity, url, host);
-		}
+		openExternalBrowser(activity, url, host);
 	}
 
 	public static void openExternalBrowser(@Nullable Activity activity, @Nullable String url, @Nullable String host) {
