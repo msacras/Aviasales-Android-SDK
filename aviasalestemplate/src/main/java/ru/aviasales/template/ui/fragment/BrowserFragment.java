@@ -82,7 +82,6 @@ public class BrowserFragment extends BaseFragment {
 		ViewGroup layout = (ViewGroup) inflater.inflate(R.layout.browser_fragment, container, false);
 		setupViews(layout);
 
-		getActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
 		setTextToActionBar(title);
 
 		return layout;
