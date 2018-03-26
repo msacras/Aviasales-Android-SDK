@@ -23,11 +23,8 @@ public class BrowserActivity extends AppCompatActivity {
 		setContentView(R.layout.browser_fragment_layout);
 		initFragment();
 
-//		Toolbar toolbar = findViewById(R.id.toolbar);
-//		setSupportActionBar(toolbar);
-
-//		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
 	}
 
 //	@Override
