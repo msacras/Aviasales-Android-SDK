@@ -3,11 +3,6 @@
 
     <application
         android:allowBackup="true">
-        <activity
-            android:name="ru.aviasales.template.BrowserActivity"
-            android:configChanges="orientation|screenSize"
-            android:theme="@style/AviasalesTemplateTheme">
-        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
