@@ -56,9 +56,7 @@ public class TicketDetailsFragment extends BaseFragment {
 			if (url == null) {
 				Toast.makeText(getActivity(), R.string.agency_adapter_server_error, Toast.LENGTH_SHORT).show();
 			} else {
-				if (getActivity() != null) {
-					openBrowser(url, gateKey);
-				}
+				BrowserUtils.openExternalBrowser(getActivity(), url, getSdkHost());
 			}
 		}
 
@@ -212,10 +210,6 @@ public class TicketDetailsFragment extends BaseFragment {
 		ProgressDialogWindow dialog = new ProgressDialogWindow();
 		dialog.setCancelable(false);
 		createDialog(dialog);
-	}
-
-	protected void openBrowser(String url, String gateKey) {
-		BrowserUtils.openBrowser(getActivity(), url, String.format(getString(R.string.browser_title), getAgencyName(gateKey)), getSdkHost(), true);
 	}
 
 	private String getSdkHost() {
