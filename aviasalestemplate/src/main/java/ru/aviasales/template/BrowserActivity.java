@@ -24,14 +24,17 @@ public class BrowserActivity extends AppCompatActivity {
 		initFragment();
 
 		Toolbar toolbar = findViewById(R.id.toolbar);
-		toolbar.setNavigationIcon(R.drawable.back_navigation_arrow);
+		setSupportActionBar(toolbar);
 
-		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				onBackPressed();
-			}
-		});
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View view) {
+//				onBackPressed();
+//			}
+//		});
 	}
 
 	@Override
