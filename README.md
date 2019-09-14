@@ -1,3 +1,5 @@
+## DEPRICATED. Use https://github.com/travelpayouts/travel-app-android
+
 Aviasales/JetRadar Android SDK 2.0
 =================
 
