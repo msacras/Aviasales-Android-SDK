@@ -10,24 +10,26 @@
 		android:paddingTop="19dp"
 		android:layout_height="wrap_content">
 
-	<android.support.v7.widget.AppCompatTextView
+	<com.devspark.robototextview.widget.RobotoTextView
 			android:id="@+id/tv_title"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textSize="14dp"
+			app:robotoTypeface="roboto_medium"
 			android:layout_marginLeft="16dp"
 			android:layout_marginRight="16dp"
-			android:textColor="@color/base_filter_title_text_color"/><!--app:typeface="roboto_medium"-->
+			android:textColor="@color/base_filter_title_text_color"/>
 
-	<android.support.v7.widget.AppCompatTextView
+	<com.devspark.robototextview.widget.RobotoTextView
 			android:id="@+id/tv_values"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="22dp"
 			android:gravity="center_horizontal"
 			android:textColor="@color/base_filter_value_color"
+			app:robotoTypeface="roboto_medium"
 			android:layout_marginRight="16dp"
-			android:layout_marginLeft="16dp"/><!--app:typeface="roboto_medium"-->
+			android:layout_marginLeft="16dp"/>
 
 	<LinearLayout
 			android:id="@+id/llay_base_range_seekbar_filter_view_filter"

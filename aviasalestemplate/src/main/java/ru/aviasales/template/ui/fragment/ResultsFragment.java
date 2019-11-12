@@ -1,8 +1,6 @@
 package ru.aviasales.template.ui.fragment;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.style.UnderlineSpan;
@@ -14,9 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.List;
-
 import ru.aviasales.adsinterface.AdsInterface;
 import ru.aviasales.core.AviasalesSDK;
 import ru.aviasales.core.ads.AdsManager;
@@ -172,11 +168,7 @@ public class ResultsFragment extends BaseFragment {
 		inflater.inflate(R.menu.results_menu, menu);
 		View currency = null;
 
-		if (Build.VERSION.SDK_INT <= 10) {
-			currency = MenuItemCompat.getActionView(menu.findItem(R.id.currency));
-		} else {
-			currency = menu.findItem(R.id.currency).getActionView();
-		}
+		currency = menu.findItem(R.id.currency).getActionView();
 
 		currencyTextView = (TextView) currency.findViewById(R.id.tv_currency);
 

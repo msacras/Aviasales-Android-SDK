@@ -1,51 +1,52 @@
 apply plugin: 'com.android.application'
 
 repositories {
-    jcenter()
-    mavenCentral()
-    maven { url 'http://android.aviasales.ru/repositories/' }
+  mavenCentral()
+  google()
+  jcenter()
+  maven { url 'http://android.aviasales.ru/repositories/' }
+  flatDir {
+    dirs project(':appodeallib').file('libs-aar')
+  }
 }
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+  compileSdkVersion rootProject.ext.compileSdkVersion
 
-    defaultConfig {
-        applicationId "ru.aviasales.ads_example"
-        minSdkVersion 11
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0.1"
-        multiDexEnabled true
-    }
-    buildTypes {
-        debug {
-            ext.betaDistributionNotifications = true
-            ext.betaDistributionGroupAliases = "as-android-dev"
-        }
-
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+  defaultConfig {
+    applicationId "ru.aviasales.ads_example"
+    minSdkVersion 14
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode 1
+    versionName "1.0.1"
+    multiDexEnabled true
+  }
+  buildTypes {
+    debug {
+      ext.betaDistributionNotifications = true
+      ext.betaDistributionGroupAliases = "as-android-dev"
     }
 
-    dexOptions {
-        javaMaxHeapSize "4g"
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-	lintOptions {
-		checkReleaseBuilds false
-		abortOnError false
-	}
+  }
+
+  dexOptions {
+    javaMaxHeapSize "4g"
+  }
+  lintOptions {
+    checkReleaseBuilds false
+    abortOnError false
+  }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:multidex:1.0.1'
-    compile project(':appodeallib')
-    compile project(':aviasalestemplate')
-//	compile 'ru.aviasales.template:aviasalesSdkTemplate:2.1.10'
-//	compile 'ru.aviasales.template:appodeallib:2.1.10'
-
-    compile "com.google.android.gms:play-services-ads:$rootProject.ext.gmsVersion"
+  implementation(project(':appodeallib'))
+  implementation project(':aviasalestemplate')
+//  compile 'ru.aviasales.template:aviasalesSdkTemplate:2.1.12'
+//      implementation 'ru.aviasales.template:appodeallib:2.1.13'
+  implementation 'com.android.support:multidex:1.0.3'
+  implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
 }

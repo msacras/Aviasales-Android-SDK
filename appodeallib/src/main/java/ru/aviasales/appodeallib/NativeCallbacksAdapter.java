@@ -3,11 +3,9 @@ package ru.aviasales.appodeallib;
 import com.appodeal.ads.NativeAd;
 import com.appodeal.ads.NativeCallbacks;
 
-import java.util.List;
-
 public class NativeCallbacksAdapter implements NativeCallbacks {
 	@Override
-	public void onNativeLoaded(List<NativeAd> list) {
+	public void onNativeLoaded() {
 
 	}
 

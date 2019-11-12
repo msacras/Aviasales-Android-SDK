@@ -5,17 +5,19 @@ version = VERSION_NAME
 
 android {
 	compileSdkVersion rootProject.ext.compileSdkVersion
-	buildToolsVersion rootProject.ext.buildToolsVersion
 
 	defaultConfig {
-		minSdkVersion rootProject.ext.minSdkVersion
+		minSdkVersion 14
 		targetSdkVersion rootProject.ext.targetSdkVersion
+	}
+	repositories {
+		google()
 	}
 }
 
 dependencies {
-	compile fileTree(dir: 'libs', include: ['*.jar'])
-	compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
 }
 
 

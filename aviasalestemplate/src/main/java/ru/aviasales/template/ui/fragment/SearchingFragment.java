@@ -14,7 +14,6 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import ru.aviasales.adsinterface.AdsInterface;
 import ru.aviasales.core.AviasalesSDK;
 import ru.aviasales.core.http.exception.ApiExceptions;
@@ -97,11 +96,10 @@ public class SearchingFragment extends BaseFragment {
 					}
 
 					@Override
-					public void onError(int errorCode, int responseCode, String searchId) {
+					public void onError(int errorCode, int responseCode, @Nullable Throwable throwable, String searchId) {
 						if (getActivity() == null) {
 							return;
 						}
-
 						switch (errorCode) {
 							case ApiExceptions.NO_RESULTS_EXCEPTION:
 								showToastAndReturnToSearchForm(getString(R.string.alert_no_results));

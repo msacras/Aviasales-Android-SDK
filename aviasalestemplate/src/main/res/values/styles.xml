@@ -10,33 +10,33 @@
 	</style>
 
 	<style name="search.passengers"
-		parent="search.class">
+	       parent="search.class">
 		<item name="android:textSize">14dp</item>
 	</style>
 
 	<style name="search.class"
-		parent="search.class.title">
+	       parent="search.class.title">
 		<item name="android:textSize">14dp</item>
 		<item name="android:textColor">@color/grey_37474F</item>
 	</style>
 
 	<style name="search.class.title"
-		parent="search">
-		<!--<item name="typeface">roboto_regular</item>-->
+	       parent="search">
+		<item name="robotoTypeface">roboto_regular</item>
 		<item name="android:textSize">12dp</item>
 		<item name="android:textColor">@color/grey_37474F</item>
 	</style>
 
 	<style name="search"
-		parent="AviasalesTemplateTheme"/>
+	       parent="AviasalesTemplateTheme"/>
 
 	<style name="search.date.normal"
-		parent="search.text.normal"/>
+	       parent="search.text.normal"/>
 
 	<style name="search.text.normal"
-		parent="search.onelinetext">
+	       parent="search.onelinetext">
 		<item name="android:textSize">14dp</item>
-		<!--<item name="typeface">roboto_regular</item>-->
+		<item name="robotoTypeface">roboto_regular</item>
 		<item name="android:textColor">@color/search_form_destination_text</item>
 	</style>
 
@@ -46,13 +46,13 @@
 	</style>
 
 	<style name="search.date.small"
-		parent="search.text.small">
+	       parent="search.text.small">
 	</style>
 
 	<style name="search.text.small"
-		parent="search.onelinetext">
+	       parent="search.onelinetext">
 		<item name="android:textSize">12dp</item>
-		<!--<item name="typeface">roboto_regular</item>-->
+		<item name="robotoTypeface">roboto_regular</item>
 		<item name="android:textColor">@color/grey_98000000</item>
 	</style>
 
@@ -64,28 +64,28 @@
 	</style>
 
 	<style name="search.destination.iata"
-		parent="search.onelinetext">
+	       parent="search.onelinetext">
 		<item name="android:textSize">24dp</item>
 		<item name="android:textColor">@color/dark_blue_455A64</item>
-		<!--<item name="typeface">roboto_medium</item>-->
+		<item name="robotoTypeface">roboto_medium</item>
 	</style>
 
 	<style name="search.passengers.title"
-		parent="search.class.title">
+	       parent="search.class.title">
 		<item name="android:textColor">@color/grey_98000000</item>
 	</style>
 
 	<style name="search.destination.city"
-		parent="search.onelinetext">
+	       parent="search.onelinetext">
 		<item name="android:textSize">18dp</item>
-		<!--<item name="typeface">roboto_regular</item>-->
+		<item name="robotoTypeface">roboto_regular</item>
 		<item name="android:textColor">@color/grey_37474F</item>
 	</style>
 
 	<style name="search.destination.airport"
-		parent="search.onelinetext">
+	       parent="search.onelinetext">
 		<item name="android:textSize">10dp</item>
-		<!--<item name="typeface">roboto_regular</item>-->
+		<item name="robotoTypeface">roboto_regular</item>
 		<item name="android:textColor">@color/grey_37474F</item>
 	</style>
 
@@ -93,7 +93,7 @@
 		<item name="android:textSize">14dp</item>
 		<item name="android:textAllCaps">false</item>
 		<item name="android:gravity">center</item>
-		<!--<item name="typeface">roboto_regular</item>-->
+		<item name="robotoTypeface">roboto_regular</item>
 		<item name="android:textColor">@color/grey_626262</item>
 	</style>
 
@@ -112,7 +112,7 @@
 		<item name="android:textSize">20dp</item>
 		<item name="android:singleLine">true</item>
 		<item name="android:ellipsize">marquee</item>
-		<!--<item name="typeface">roboto_medium</item>-->
+		<item name="robotoTypeface">roboto_medium</item>
 		<item name="android:textColor">@color/grey_text</item>
 	</style>
 
@@ -138,7 +138,7 @@
 	</style>
 
 	<style name="results.listview"
-		parent="base_listview_with_divider">
+	       parent="base_listview_with_divider">
 		<item name="android:overScrollMode">ifContentScrolls</item>
 		<item name="android:cacheColorHint">@color/white</item>
 		<item name="android:dividerHeight">0.33dp</item>
@@ -151,11 +151,11 @@
 	<style name="results.actionbar.title" parent="results">
 		<item name="android:textColor">@color/white</item>
 		<item name="android:textSize">20dp</item>
-		<!--<item name="typeface">roboto_medium</item>-->
+		<item name="robotoTypeface">roboto_medium</item>
 	</style>
 
 	<style name="results"
-		parent="Theme.Aviasales"/>
+	       parent="Theme.Aviasales"/>
 
 	<style name="Theme.Aviasales" parent="Theme.AppCompat.Light.NoActionBar">
 		<item name="android:windowContentOverlay">@null</item>
@@ -164,7 +164,7 @@
 	</style>
 
 	<style name="waiting.dialog.text.medium"
-		parent="main_text_color_without_states">
+	       parent="main_text_color_without_states">
 		<item name="android:textSize">18dp</item>
 	</style>
 
@@ -173,12 +173,12 @@
 	</style>
 
 	<style name="waiting.dialog.text.small"
-		parent="main_text_color_without_states">
+	       parent="main_text_color_without_states">
 		<item name="android:textSize">14dp</item>
 	</style>
 
 	<style name="browser.dialog"
-		parent="CustomDialog">
+	       parent="CustomDialog">
 		<item name="android:windowBackground">@drawable/browser_dialog_bkg</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:windowIsFloating">true</item>
@@ -191,13 +191,13 @@
 	<style name="browser"/>
 
 	<style name="browser.dialog.text"
-		parent="browser">
+	       parent="browser">
 		<item name="android:textSize">15.5dp</item>
 		<item name="android:textColor">@color/white</item>
 	</style>
 
 	<style name="filters_seekbar"
-		parent="@android:style/Widget.SeekBar">
+	       parent="@android:style/Widget.SeekBar">
 		<item name="android:maxHeight">@dimen/filters_seekbar_height</item>
 		<item name="android:progressDrawable">@drawable/filters_seekbar</item>
 		<item name="android:thumb">@drawable/seek_bar_thumb</item>
@@ -205,21 +205,21 @@
 
 	<declare-styleable name="RangeBar">
 		<attr name="absoluteMinValue"
-			format="integer|float"/>
+		      format="integer|float"/>
 		<attr name="absoluteMaxValue"
-			format="integer|float"/>
+		      format="integer|float"/>
 		<attr name="singleThumb"
-			format="boolean"/>
+		      format="boolean"/>
 		<attr name="backgroundColor"
-			format="color"/>
+		      format="color"/>
 		<attr name="progressColor"
-			format="color"/>
+		      format="color"/>
 		<attr name="thumbColor"
-			format="color"/>
+		      format="color"/>
 		<attr name="thumbRippleColor"
-			format="color"/>
+		      format="color"/>
 		<attr name="disabledColor"
-			format="color"/>
+		      format="color"/>
 	</declare-styleable>
 
 </resources>

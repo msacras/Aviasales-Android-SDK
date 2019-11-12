@@ -1,11 +1,9 @@
 package ru.aviasales.template.ui.model;
 
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-
 import ru.aviasales.core.http.utils.CoreDateUtils;
 import ru.aviasales.core.search.params.Segment;
 import ru.aviasales.core.search_airports.object.PlaceData;
@@ -79,16 +77,16 @@ public class SimpleSearchParams {
 	public List<Segment> createSegments() {
 		List<Segment> segments = new ArrayList<>();
 		Segment departSegment = new Segment();
-		departSegment.setOrigin(origin.getIata());
-		departSegment.setDestination(destination.getIata());
+		departSegment.setOrigin(origin.getCode());
+		departSegment.setDestination(destination.getCode());
 		departSegment.setDate(departDate);
 
 		segments.add(departSegment);
 
 		if (isReturnEnabled()) {
 			Segment returnSegment = new Segment();
-			returnSegment.setOrigin(destination.getIata());
-			returnSegment.setDestination(origin.getIata());
+			returnSegment.setOrigin(destination.getCode());
+			returnSegment.setDestination(origin.getCode());
 			returnSegment.setDate(returnDate);
 
 			segments.add(returnSegment);

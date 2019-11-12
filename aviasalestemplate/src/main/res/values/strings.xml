@@ -193,5 +193,6 @@
 	<string name="base_filter_stop_over_count">Layovers</string>
 	<string name="base_filter_landing">To</string>
 	<string name="base_filter_landing_back">Return Landing Time</string>
+  <string name="privacy_policy">Privacy policy</string>
 
 </resources>

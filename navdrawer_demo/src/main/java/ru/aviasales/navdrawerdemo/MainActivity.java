@@ -12,11 +12,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import ru.aviasales.core.AviasalesSDK;
 import ru.aviasales.core.identification.SdkConfig;
 import ru.aviasales.navdrawerdemo.fragment.EmptyFragment;
 import ru.aviasales.template.ui.fragment.AviasalesFragment;
+import ru.aviasales.template.utils.PrivacyPolicyUrl;
 
 public class MainActivity extends AppCompatActivity
 		implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
+
+		//Replace with your Privacy policy URL or leave blank for default Privacy policy
+		PrivacyPolicyUrl.setUrl("");
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 		ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

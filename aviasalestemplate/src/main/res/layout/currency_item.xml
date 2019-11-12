@@ -6,7 +6,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="36dp">
 
-	<android.support.v7.widget.AppCompatTextView
+	<com.devspark.robototextview.widget.RobotoTextView
 			android:id="@+id/tv_currency_item_code"
 			android:layout_width="wrap_content"
 			android:layout_height="36dp"
@@ -16,9 +16,9 @@
 			android:gravity="center_vertical"
 			android:textColor="@color/gray_828282"
 			android:textSize="13.33dp"
-			/><!--app:typeface="roboto_slab_regular"-->
+			app:robotoTypeface="roboto_slab_regular"/>
 
-	<android.support.v7.widget.AppCompatCheckedTextView
+	<com.devspark.robototextview.widget.RobotoCheckedTextView
 			android:id="@+id/tv_currency_item_name"
 			android:layout_width="match_parent"
 			android:layout_height="36dp"

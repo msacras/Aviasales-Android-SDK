@@ -1,9 +1,11 @@
+## DEPRICATED. Use https://github.com/travelpayouts/travel-app-android
+
 Aviasales/JetRadar Android SDK 2.0
 =================
 
 Aviasales/JetRadar Android SDK is a framework integrating flight search engine into your app. When your customer books a flight, we pay you a [commission fee](https://www.travelpayouts.com). Framework is based on leading flight search engines [Aviasales](http://www.aviasales.ru) and [JetRadar](http://www.jetradar.com).
 
-SDK supports all Android devices with Android 2.3 (API 9) and higher.
+SDK supports all Android devices with Android API 16 and higher.
 
 The framework consists of:
 * search API library for search server interaction;
@@ -19,10 +21,18 @@ Learn more and complete integration with [Aviasales Android SDK Documentation](h
 
 More languages: [RUS] [Документация Aviasaels Android SDK](https://github.com/KosyanMedia/Aviasales-Android-SDK/wiki/О-SDK).
 
-## What's new
-- `IdentificationData.java` is renamed to `SdkConfig.java`
-- In `IdentificationData` added `sdk-host` parameter. See Installation instructions for more info
+## What's new in 2.1.17
+- Added default privacy policy (you should change it to your own). Set it through `PrivacyPolicyUrl.setUrl("MY_PRIVACY_POLICY_URL");`
 
+## Privacy Policy
+
+Privacy Policy is **REQUIRED** for your app. If it is missing, your app may be removed from the Google Play at anytime.  
+We've included a default Privacy Policy in the template app, but you should create YOUR OWN.  
+(you can use online services like [privacypolicytemplate.net](https://privacypolicytemplate.net) or [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com)).  
+NEXT STEPS:
+1) Upload privacy policy to your website and copy a link to it.
+2) Use this link for a Privacy Policy field in Google Play Console.
+3) Inside your app call PrivacyPolicyUrl.setUrl("MY_PRIVACY_POLICY_URL") with a link to your own Privacy Policy.
 
 ## Installation
 
@@ -36,7 +46,7 @@ repositories {
 }
 
 dependencies {
-    compile 'ru.aviasales.template:aviasalesSdk:2.1.10-sdk'
+    compile 'ru.aviasales:aviasalesSdk:2.1.16-sdk'
 }
 ```
 
@@ -48,7 +58,7 @@ repositories {
 }
 
 dependencies {
-    compile 'ru.aviasales.template:aviasalesSdkTemplate:2.1.10'
+    compile 'ru.aviasales.template:aviasalesSdkTemplate:2.1.17'
 }
 ```
 
@@ -196,7 +206,7 @@ To add Appodeal Ads to your project just add additional maven dependency:
 
 ```gradle
 dependencies {
-    compile 'ru.aviasales.template:appodeallib:2.1.10'
+    compile 'ru.aviasales.template:appodeallib:2.1.17'
 }
 ```
 
@@ -210,6 +220,20 @@ And then initialize it
 		ads.init(this, APPODEAL_APP_KEY);  // your appodeal key
 		AdsImplKeeper.getInstance().setCustomAdsInterfaceImpl(ads); // assign your appodeal
 ```
+### Admob support
+If you use play services version 17 and upper you must add <meta-data> tag to Android manifest file. 
+```xml
+<manifest>
+    <application>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="[ADMOB_APP_ID]"/>
+    </application>
+</manifest>
+```
+You can get ADMOB_APP_ID here:
+![][3]	
+
 
 For more information about appodal ads see the [ads demo project](https://github.com/KosyanMedia/Aviasales-Android-SDK/tree/master/ads_simple_demo)
 
@@ -220,3 +244,4 @@ For more information about appodal ads see the [ads demo project](https://github
 
 [1]: /screenshots/screen.gif "Screenshot1"
 [2]: /screenshots/Screenshot_ads1.png "Screenshot2"
+[3]: https://appodeal-uploads.s3.amazonaws.com/server/production/docs_editor/0e60aa4a-f664-4fe8-8db0-54e37debd08e_de_AdMob_2018-10-11_11-16-33.png

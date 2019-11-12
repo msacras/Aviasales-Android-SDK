@@ -5,33 +5,53 @@ version = VERSION_NAME
 
 android {
 	compileSdkVersion rootProject.ext.compileSdkVersion
-	buildToolsVersion rootProject.ext.buildToolsVersion
 
 	defaultConfig {
-		minSdkVersion 10
+		minSdkVersion 14
 		targetSdkVersion rootProject.ext.targetSdkVersion
 		multiDexEnabled true
 	}
 
-	repositories {
-		jcenter()
-		mavenCentral()
-		maven { url 'http://android.aviasales.ru/repositories/' }
-	}
+  repositories {
+    mavenCentral()
+    google()
+    jcenter()
+    maven { url 'http://android.aviasales.ru/repositories/' }
+    flatDir {
+      dirs 'libs-aar'
+    }
+  }
 }
 
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
 dependencies {
-	compile fileTree(include: ['*.jar'], dir: 'libs')
-	testCompile 'junit:junit:4.12'
-	compile "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
-    compile project(':adsinterface')
+  api fileTree(include: ['*.jar'], dir: 'libs')
+	testImplementation 'junit:junit:4.12'
+  implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
+  api project(':adsinterface')
 
-	compile 'com.android.support:multidex:1.0.0'
-	compile "com.google.android.gms:play-services-ads:$rootProject.ext.gmsVersion"
-	compile 'net.pubnative:library:1.4.8'
+  api "com.google.android.gms:play-services-ads:17.1.2"
+	implementation "com.google.android.gms:play-services-location:16.0.0"
+	implementation "com.google.android.gms:play-services-gcm:16.0.0"
+
+  implementation name: 'adcolony-sdk-3.2.1', ext: 'aar'
+  implementation name: 'mmedia-6.4.0', ext: 'aar'
+  implementation name: 'mobvista_alphab', ext: 'aar'
+  implementation name: 'mobvista_appwall', ext: 'aar'
+  implementation name: 'mobvista_appwallext', ext: 'aar'
+  implementation name: 'mobvista_common', ext: 'aar'
+  implementation name: 'mobvista_interstitial', ext: 'aar'
+  implementation name: 'mobvista_mvdownloads', ext: 'aar'
+  implementation name: 'mobvista_mvjscommon', ext: 'aar'
+  implementation name: 'mobvista_mvnative', ext: 'aar'
+  implementation name: 'mobvista_nativeex', ext: 'aar'
+  implementation name: 'mobvista_offerwall', ext: 'aar'
+  implementation name: 'mobvista_playercommon', ext: 'aar'
+  implementation name: 'mobvista_reward', ext: 'aar'
+  implementation name: 'mobvista_videocommon', ext: 'aar'
+  implementation name: 'mobvista_videofeeds', ext: 'aar'
 }
 
 apply from: rootProject.file('release.gradle')

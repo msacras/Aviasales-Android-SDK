@@ -41,16 +41,16 @@
 				android:layout_marginLeft="14dp"
 				android:layout_marginTop="8dp">
 
-				<android.support.v7.widget.AppCompatTextView
+				<com.devspark.robototextview.widget.RobotoTextView
 					android:id="@+id/tv_price"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:text="2 280 404"
 					android:textColor="@color/dark_blue_455A64"
 					android:textSize="26dp"
-					/><!--app:typeface="roboto_light"-->
+					app:robotoTypeface="roboto_light"/>
 
-				<android.support.v7.widget.AppCompatTextView
+				<com.devspark.robototextview.widget.RobotoTextView
 					android:id="@+id/tv_currency"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
@@ -61,10 +61,10 @@
 					android:textAllCaps="true"
 					android:textColor="@color/dark_blue_455A64"
 					android:textSize="10dp"
-					/><!--app:typeface="roboto_regular"-->
+					app:robotoTypeface="roboto_regular"/>
 			</RelativeLayout>
 
-			<android.support.v7.widget.AppCompatButton
+			<com.devspark.robototextview.widget.RobotoButton
 				android:id="@+id/btn_buy"
 				android:layout_width="match_parent"
 				android:layout_height="51dp"

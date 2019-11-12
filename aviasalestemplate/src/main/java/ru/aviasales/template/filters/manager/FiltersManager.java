@@ -2,7 +2,9 @@ package ru.aviasales.template.filters.manager;
 
 import android.content.Context;
 import android.os.Handler;
+import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -54,10 +56,8 @@ public class FiltersManager {
 			public void run() {
 				List<Proposal> filteredTickets = localFiltersSet.applyFilters(searchData);
 				mHandler.post(new EndRunnable(filteredTickets));
-
 			}
 		});
-
 	}
 
 	private void createPool() {
@@ -98,35 +98,37 @@ public class FiltersManager {
 
 		createPool();
 
-		filteredProposals = searchData.getProposals();
+		filteredProposals = new ArrayList<>();
+		filteredProposals.addAll(searchData.getProposals());
 
 		pool.submit(new Runnable() {
 			@Override
 			public void run() {
-				if (context == null) {
-					return;
-				}
-				if (searchData.getProposals() != null) {
-
-					if (searchData.isComplexSearch()) {
-						filtersSet = new OpenJawFiltersSet(context);
-					} else {
-						filtersSet = new SimpleSearchFilters(context);
+				try {
+					if (context == null) {
+						return;
 					}
+					if (searchData.getProposals() != null) {
 
-					filtersSet.initMinAndMaxValues(context, searchData, searchData.getProposals());
-					filtersSet.clearFilters();
+						if (searchData.isComplexSearch()) {
+							filtersSet = new OpenJawFiltersSet(context);
+						} else {
+							filtersSet = new SimpleSearchFilters(context);
+						}
 
-					List<Proposal> filteredTickets = filtersSet.applyFilters(searchData);
-					Collections.sort(filteredTickets, ProposalManager.getInstance().getProposalComparator());
+						filtersSet.initMinAndMaxValues(context, searchData, filteredProposals);
+						filtersSet.clearFilters();
 
-					filteredProposals = filteredTickets;
+						List<Proposal> filteredTickets = filtersSet.applyFilters(searchData);
+						Collections.sort(filteredTickets, ProposalManager.getInstance().getProposalComparator());
 
+						filteredProposals = filteredTickets;
+						Log.d("OLOLO", "Filters initialized");
+					}
+				} catch (Exception e) {
+					Log.e(FiltersManager.class.getSimpleName(), e.toString());
 				}
-
 			}
 		});
-
 	}
-
 }

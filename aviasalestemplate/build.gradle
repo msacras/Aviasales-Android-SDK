@@ -4,37 +4,35 @@ project.group = GROUP
 version = VERSION_NAME
 
 repositories {
-    jcenter()
     mavenCentral()
+    google()
+    jcenter()
     maven { url 'http://android.aviasales.ru/repositories/' }
 }
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 14
         targetSdkVersion rootProject.ext.targetSdkVersion
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile "com.android.support:support-v4:$rootProject.ext.supportVersion"
-    compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
-    compile "com.android.support:support-media-compat:$rootProject.ext.supportVersion"
-    compile "com.android.support:cardview-v7:$rootProject.ext.supportVersion"
-    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.ext.supportVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportVersion"
 
-    compile 'ru.aviasales:aviasalesSdk:2.1.10-sdk'
-    compile project(':adsinterface')
-    compile project(':expandedlistview')
+    api 'ru.aviasales:aviasalesSdk:2.1.16-sdk'
+    implementation project(':adsinterface')
+    implementation project(':expandedlistview')
 
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
-    compile "com.google.android.gms:play-services-ads:$rootProject.ext.gmsVersion"
+    implementation 'com.github.johnkil.android-robototextview:robototextview:4.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 }
 
 apply plugin: 'maven'

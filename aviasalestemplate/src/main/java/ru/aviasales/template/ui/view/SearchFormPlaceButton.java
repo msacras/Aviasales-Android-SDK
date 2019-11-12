@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import ru.aviasales.core.search_airports.object.PlaceData;
 import ru.aviasales.template.R;
 import ru.aviasales.template.utils.Utils;
@@ -83,7 +82,7 @@ public class SearchFormPlaceButton extends RelativeLayout {
 		airport += ", " + placeData.getCountry();
 		tvAirport.setText(airport.toUpperCase());
 
-		tvIata.setText(placeData.getIata());
+		tvIata.setText(placeData.getCode());
 	}
 
 	public int getType() {

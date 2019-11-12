@@ -1,10 +1,8 @@
 package ru.aviasales.template.ui.model;
 
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
 import ru.aviasales.core.http.utils.CoreDateUtils;
 import ru.aviasales.core.search.params.Segment;
 import ru.aviasales.core.search_airports.object.PlaceData;
@@ -71,8 +69,8 @@ public class ComplexSearchParamsSegment {
 	public Segment toSearchSegment() {
 		Segment segment = new Segment();
 		segment.setDate(date);
-		segment.setOrigin(origin.getIata());
-		segment.setDestination(destination.getIata());
+		segment.setOrigin(origin.getCode());
+		segment.setDestination(destination.getCode());
 		return segment;
 	}
 

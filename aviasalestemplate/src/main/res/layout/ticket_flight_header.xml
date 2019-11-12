@@ -21,7 +21,7 @@
 			android:layout_centerVertical="true"
 			android:layout_marginLeft="63dp">
 
-		<android.support.v7.widget.AppCompatTextView
+		<com.devspark.robototextview.widget.RobotoTextView
 				android:id="@+id/tv_cities"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -30,9 +30,9 @@
 				android:text="Санкт-Петербург — Санта-Круз-Де-Ла-Пальма"
 				android:textColor="@color/dark_blue_455A64"
 				android:textSize="16dp"
-				/><!--app:typeface="roboto_regular"-->
+				app:robotoTypeface="roboto_regular"/>
 
-		<android.support.v7.widget.AppCompatTextView
+		<com.devspark.robototextview.widget.RobotoTextView
 				android:id="@+id/tv_duration"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
 				android:text="4ч 37м"
 				android:textColor="@color/grey_98000000"
 				android:textSize="14dp"
-				/><!--app:typeface="roboto_regular"-->
+				app:robotoTypeface="roboto_regular"/>
 	</RelativeLayout>
 
 </ru.aviasales.template.ui.view.TicketFlightHeaderView>

@@ -7,12 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-
 import ru.aviasales.template.R;
 import ru.aviasales.template.ui.model.ComplexSearchParamsSegment;
 
@@ -116,7 +114,7 @@ public class ComplexParamsView extends FrameLayout implements ComplexSegmentView
 			ComplexSearchParamsSegment secondSegment = segments.get(1);
 			if (firstSegment.getOrigin() != null && firstSegment.getDestination() != null && secondSegment.getOrigin() == null) {
 				secondSegment.setOrigin(firstSegment.getDestination());
-				segmentViews.get(1).changeDepartureData(secondSegment.getOrigin().getIata(),
+				segmentViews.get(1).changeDepartureData(secondSegment.getOrigin().getCode(),
 						secondSegment.getOrigin().getName(), false);
 				if (listener != null) {
 					listener.segmentChanged(ComplexParamsView.this, segmentViews.get(1), 1, segments.get(1));
@@ -147,10 +145,10 @@ public class ComplexParamsView extends FrameLayout implements ComplexSegmentView
 		ComplexSegmentView segmentView = this.segmentViews.get(i);
 		if (i < this.segments.size() && this.segments.get(i) != null && segmentView != null) {
 			if (segment.getOrigin() != null) {
-				segmentView.changeDepartureData(segment.getOrigin().getIata(), segment.getOrigin().getName(), false);
+				segmentView.changeDepartureData(segment.getOrigin().getCode(), segment.getOrigin().getName(), false);
 			}
 			if (segment.getDestination() != null) {
-				segmentView.changeArrivalData(segment.getDestination().getIata(), segment.getDestination().getName(), false);
+				segmentView.changeArrivalData(segment.getDestination().getCode(), segment.getDestination().getName(), false);
 			}
 			if (segment.getStringDate() != null) {
 				segmentView.changeDateData(segment.getDateInMM_ddFormat(), segment.getYear(), false);
@@ -170,11 +168,11 @@ public class ComplexParamsView extends FrameLayout implements ComplexSegmentView
 	private void addSegmentView(Integer id, ComplexSearchParamsSegment segment) {
 		ComplexSegmentView segmentView = new ComplexSegmentView(getContext());
 		if (segment.getOrigin() != null) {
-			segmentView.changeDepartureData(segment.getOrigin().getIata(), segment.getOrigin().getName(), false);
+			segmentView.changeDepartureData(segment.getOrigin().getCode(), segment.getOrigin().getName(), false);
 		}
 
 		if (segment.getDestination() != null) {
-			segmentView.changeArrivalData(segment.getDestination().getIata(), segment.getDestination().getName(), false);
+			segmentView.changeArrivalData(segment.getDestination().getCode(), segment.getDestination().getName(), false);
 		}
 
 		if (segment.getStringDate() != null) {

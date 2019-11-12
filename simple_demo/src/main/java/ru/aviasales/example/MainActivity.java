@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-
 import ru.aviasales.core.AviasalesSDK;
 import ru.aviasales.core.identification.SdkConfig;
 import ru.aviasales.template.ui.fragment.AviasalesFragment;
+import ru.aviasales.template.utils.PrivacyPolicyUrl;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,42 +17,45 @@ public class MainActivity extends AppCompatActivity {
 	private final static String SDK_HOST = "www.travel-api.pw";
 	private AviasalesFragment aviasalesFragment;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
 
-		AviasalesSDK.getInstance().init(this, new SdkConfig(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN, SDK_HOST));
-		setContentView(R.layout.activity_main);
+    //Replace with your Privacy policy URL or leave blank for default Privacy policy
+    PrivacyPolicyUrl.setUrl("");
 
-		init();
-	}
+    AviasalesSDK.getInstance().init(this, new SdkConfig(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN, SDK_HOST));
+    setContentView(R.layout.activity_main);
 
-	private void init() {
-		initFragment();
-	}
+    init();
+  }
 
-	private void initFragment() {
-		FragmentManager fm = getSupportFragmentManager();
-		aviasalesFragment = (AviasalesFragment) fm.findFragmentByTag(AviasalesFragment.TAG);
+  private void init() {
+    initFragment();
+  }
 
-		if (aviasalesFragment == null) {
-			aviasalesFragment = (AviasalesFragment) AviasalesFragment.newInstance();
-		}
+  private void initFragment() {
+    FragmentManager fm = getSupportFragmentManager();
+    aviasalesFragment = (AviasalesFragment) fm.findFragmentByTag(AviasalesFragment.TAG);
 
-		FragmentTransaction fragmentTransaction = fm.beginTransaction();
-		fragmentTransaction.replace(R.id.fragment_place, aviasalesFragment, AviasalesFragment.TAG);
-		fragmentTransaction.commit();
-	}
+    if (aviasalesFragment == null) {
+      aviasalesFragment = (AviasalesFragment) AviasalesFragment.newInstance();
+    }
 
-	@Override
-	public void onBackPressed() {
-		if (!aviasalesFragment.onBackPressed()) {
-			super.onBackPressed();
-		}
-	}
+    FragmentTransaction fragmentTransaction = fm.beginTransaction();
+    fragmentTransaction.replace(R.id.fragment_place, aviasalesFragment, AviasalesFragment.TAG);
+    fragmentTransaction.commit();
+  }
 
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-	}
+  @Override
+  public void onBackPressed() {
+    if (!aviasalesFragment.onBackPressed()) {
+      super.onBackPressed();
+    }
+  }
+
+  @Override
+  protected void onSaveInstanceState(Bundle outState) {
+    super.onSaveInstanceState(outState);
+  }
 }

@@ -208,6 +208,7 @@
 	<string name="base_filter_landing">Прибытие</string>
 	<string name="base_filter_landing_back">Прибытие обратно</string>
 
+	<string name="privacy_policy">Политика конфиденциальности</string>
 	<!--<string name="ticket_flight_text">Рейс</string>-->
 
 </resources>

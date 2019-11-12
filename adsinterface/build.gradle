@@ -4,21 +4,24 @@ project.group = GROUP
 version = VERSION_NAME
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+  compileSdkVersion rootProject.ext.compileSdkVersion
 
-    defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-    }
+  defaultConfig {
+    minSdkVersion 14
+    targetSdkVersion rootProject.ext.targetSdkVersion
+  }
+
+  repositories {
+    google()
+  }
 }
 
 apply plugin: 'maven'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  testImplementation 'junit:junit:4.12'
+  implementation "com.android.support:support-annotations:$rootProject.ext.supportVersion"
 }
 
 apply from: rootProject.file('release.gradle')
